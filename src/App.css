@@ -1,9 +1,43 @@
-#root {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 500px auto 500px;
-  width: 100%;
-  height: 100dvh;
-  background: #242424;
-  color: #ffffff;
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.eslogan{
+  font-size: 30px;
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f1d34d;
+  min-height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: calc(15px + 2vmin);
+  font-style: bold;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

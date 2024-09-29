@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import "./OpenChatFrame.css";
+
 import { initialise } from "@open-ic/openchat-xframe";
 import { OpenChatXFrame } from "@open-ic/openchat-xframe/lib/types";
+import "./Content.css"
 
 const purple = "rgb(182, 95, 247)";
 const txt = "#ffffff";
@@ -73,24 +74,21 @@ type Props = {
 };
 
 function OpenChatFrame({ path, title }: Props) {
-  // capture a reference to the iframe so that we can pass it into the xframe library
+  
   const iframe = useRef<HTMLIFrameElement>(null);
 
-  // create a state hook to store the openchat xframe client for this frame
+
   const [client, setClient] = useState<Promise<OpenChatXFrame> | undefined>(
     undefined
   );
 
-  // use an effect hook to initialise the iframe
   useEffect(() => {
-    // maku sure that the iframe ref is not null
     if (iframe.current) {
-      // if the client is undefined, we must initialise the connection with the supplied path
+     
       if (client === undefined) {
         setClient(initialiseOpenChatFrame(path, iframe.current));
       } else {
-        // if the client already exists then we assume that the path has changed and simply call changePath on the client.
-        // This avoids unnecessary re-initialisation
+        
         client.then((c) => c.changePath(path));
       }
     }

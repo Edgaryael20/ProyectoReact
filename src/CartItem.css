@@ -1,0 +1,48 @@
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    background-size: 100vw 100vh;
+	
+}
+
+
+
+  .item {
+    padding: 20px 30px;
+    height: 190px;
+    display: flex;
+    background-color: #fff;
+  }
+
+
+  .image {
+    margin-right: 50px;
+    border-radius: 20px;
+  }
+
+  .description {
+    padding-top: 40px;
+    margin-right: 60px;
+    font-size: 25px;
+    width: 120px;
+  }
+   
+ 
+
+ .cant{
+  font-size: 30px;
+  margin-top: 60px;
+  margin-left: 30px;
+  border-radius: 10px;
+  width: 105px;
+  height: 70px;
+ }
+
+ .precio{
+  font-size: 25px;
+  margin-top: 80px;
+  margin-left: 50px;
+  border-radius: 10px;
+ }
+
+ 

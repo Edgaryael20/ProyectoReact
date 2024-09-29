@@ -1,3 +1,5 @@
+import "./Content.css"
+
 type Props = {
   onSelect: (path: string, title: string) => void;
   path: string;
@@ -7,7 +9,7 @@ type Props = {
 function ChatSelector({ path, title, onSelect }: Props) {
   return (
     <p>
-      <button onClick={() => onSelect(path, title)}>{title}</button>
+      <center><button className="btn2" onClick={() => onSelect(path, title)}>{title}</button></center>
     </p>
   );
 }

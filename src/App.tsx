@@ -1,35 +1,37 @@
 import { useState } from "react";
-import "./App.css";
 import Content from "./Content";
 import OpenChatFrame from "./OpenChatFrame";
+import Form from "./cart";
+import "./Content.css"
 
 type Chat = {
   path: string;
   title: string;
 };
 
+
 function App() {
   const [leftChat, setLeftChat] = useState<Chat>({
-    path: "/community/dgegb-daaaa-aaaar-arlhq-cai/channel/12148470416168947889486180374669069959",
-    title: "Announcements",
+    path: "",
+    title: "Selecciona una de las conversaciones",
   });
-  const [rightChat, setRightChat] = useState<Chat>({
-    path: "/community/dgegb-daaaa-aaaar-arlhq-cai/channel/20429314036340368324663327710074551214",
-    title: "Bug Reports",
-  });
+  
   return (
     <>
-      <div className="left">
+    <Form></Form>
+      <div className="texto">
+      
         <OpenChatFrame {...leftChat} />
       </div>
       <Content
         onSelectLeftChat={(path, title) => setLeftChat({ path, title })}
-        onSelectRightChat={(path, title) => setRightChat({ path, title })}
+       
       />
-      <div className="right">
-        <OpenChatFrame {...rightChat} />
+      <div className="">
       </div>
     </>
+
+
   );
 }
 
